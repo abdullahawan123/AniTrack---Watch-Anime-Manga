@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "251037684922",
+    "project_id": "ani-track-d9a45",
+    "storage_bucket": "ani-track-d9a45.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:251037684922:android:74a539e08750445b53de83",
+        "android_client_info": {
+          "package_name": "com.example.manga_anime_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvsJiiWm2x50ocOXxtxcDP5NrNGaDvv9Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

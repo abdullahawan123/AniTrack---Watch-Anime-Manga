@@ -1,0 +1,46 @@
+import 'package:auto_route/auto_route.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/material.dart';
+import '../../repositories/user_repository.dart';
+import '../../utils/service_locator.dart';
+import '../widgets/readlist_item.dart';
+
+@RoutePage()
+class ReadlistPage extends StatelessWidget {
+  const ReadlistPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          'My Readlist',
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
+      ),
+      body: StreamBuilder<QuerySnapshot>(
+        stream: getIt<UserRepository>().readlist,
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return const Center(child: CircularProgressIndicator());
+          }
+          if (snapshot.hasError) {
+            return Center(child: Text('Error: ${snapshot.error}'));
+          }
+          final docs = snapshot.data?.docs ?? [];
+          if (docs.isEmpty) {
+            return const Center(child: Text('Your readlist is empty'));
+          }
+
+          return ListView.builder(
+            itemCount: docs.length,
+            itemBuilder: (context, index) {
+              final data = docs[index].data() as Map<String, dynamic>;
+              return ReadlistItem(data: data);
+            },
+          );
+        },
+      ),
+    );
+  }
+}
