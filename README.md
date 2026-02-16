@@ -1,51 +1,73 @@
-# AniTrack - Flutter Anime & Manga Tracker
+# AniTrack — Watch Anime & Manga
 
-A fully functional Flutter application to track your favorite Anime and Manga using the Jikan API and Firebase.
+AniTrack is a Flutter application that allows anime and manga fans to keep track of what they are watching or reading. Inspired by popular tracking tools and apps, this project serves as a foundation for building a full-featured anime/manga tracking experience with custom UI components and scalable architecture.
 
 ## Features
 
-- **Top Anime & Manga**: Stay updated with the most popular titles.
-- **Search**: Extensive search for any anime or manga.
-- **Details**: Full synopsis, scores, and information.
-- **Watchlist & Readlist**: Track your progress and save items to your personal list.
-- **Firebase Auth**: Secure login with Google and Email.
-- **Syncing**: Real-time sync across devices via Cloud Firestore.
-- **Offline Mode**: Local caching for a smooth experience.
-- **Premium UI**: Modern design with Shimmer effects and custom fonts.
+- Track anime and manga progress
+- Add titles to personalized watch/read lists
+- Search and browse titles
+- Responsive UI built with Flutter
+- Works across Android, iOS, and Web
 
-## Architecture
+## Tech Stack
 
-- **BLoC**: State management pattern for separation of concerns.
-- **Clean Architecture**: Repository pattern for data abstraction.
-- **AutoRoute**: Declarative routing system.
-- **GetIt**: Dependency injection for service management.
-- **BuiltValue**: Type-safe models from Jikan API.
+- **Flutter**
+- **Dart**
 
-## Setup
+## Screenshots
 
-1. **Flutter Version**: Ensure you are on Flutter 3.10.0 or later.
-2. **Dependencies**: Run `flutter pub get`.
-3. **Firebase**: 
-   - Create a Firebase project at [Firebase Console](https://console.firebase.google.com/).
-   - Add Android/iOS/Web apps.
-   - Run `flutterfire configure`.
-4. **Run**: `flutter run`.
+*(Add screenshots or GIFs showing your app UI — e.g., home screen, lists, search UI)*
 
-## Generation
+assets/screenshots/home.png
+assets/screenshots/list.png
 
-To regenerate routes and models after changes:
-```bash
-flutter pub run build_runner build --delete-conflicting-outputs
-```
 
-## Structure
+## Getting Started
 
-```
+### Prerequisites
+
+Make sure you have the following installed:
+
+- Flutter SDK  
+- Android Studio or Visual Studio Code  
+- Android / iOS emulator or physical device  
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/abdullahawan123/AniTrack---Watch-Anime-Manga.git
+Navigate to the project directory:
+
+cd AniTrack---Watch-Anime-Manga
+Install dependencies:
+
+flutter pub get
+Run the application:
+
+flutter run
+Project Structure
 lib/
-├── blocs/        # Business logic components
-├── models/       # Data models
-├── repositories/ # Data source abstractions
-├── services/     # Third-party services (Firebase, API)
-├── ui/           # Screens and widgets
-└── utils/        # Helpers and DI
-```
+├── main.dart
+├── screens/
+│   ├── home_screen.dart
+│   ├── list_screen.dart
+│   └── search_screen.dart
+├── widgets/
+├── models/
+└── services/
+Future Enhancements
+Connect to external anime/manga databases (MyAnimeList, AniList)
+
+User accounts and syncing across devices
+
+Episode/chapter tracking and notifications
+
+Dark/Light theme toggle
+
+Advanced search filters
+
+Author
+Abdullah Awan
